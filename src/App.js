@@ -16,6 +16,7 @@ function App() {
 	useEffect(() => {
 		addContact('Antoine', '0601156456', 'antoine.ratat@gmail.com')
 		addContact('Bastien', '0601156456', 'bastien.ratat@gmail.com')
+		addAppointment('Doctor', 'Antoine', '29/08/21', '15:30')
 	}, [])
 
 	const addContact = (name, phone, email) => {

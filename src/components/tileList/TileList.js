@@ -6,8 +6,9 @@ export const TileList = (props) => {
 
 	return (
 		<>
-			{contacts.map((contact) => {
-				return <Tile key={contact.name} contact={contact} />
+			{contacts.map((contact, count) => {
+				count++
+				return <Tile key={count} contact={contact} />
 			})}
 			<br />
 		</>
