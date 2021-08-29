@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, Redirect, NavLink } from 'react-router-dom'
+import { Switch, Route, Redirect, NavLink, BrowserRouter as Router } from 'react-router-dom'
 
 import AppointmentsPage from './containers/appointmentsPage/AppointmentsPage'
 import ContactsPage from './containers/contactsPage/ContactsPage'
@@ -11,7 +11,7 @@ function App() {
 	}
 
 	return (
-		<>
+		<Router>
 			<nav>
 				<NavLink to={ROUTES.CONTACTS} activeClassName='active'>
 					Contacts
@@ -30,7 +30,7 @@ function App() {
 					</Route>
 				</Switch>
 			</main>
-		</>
+		</Router>
 	)
 }
 
