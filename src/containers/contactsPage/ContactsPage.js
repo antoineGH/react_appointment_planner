@@ -20,11 +20,15 @@ export default function ContactsPage(props) {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		if (duplicate) {
-			alert('Already existing')
+			alert('Already existing.')
 			setDuplicate(false)
 			return
 		}
 		addContact(name, phone, email)
+		alert('Contact Added.')
+		setName('')
+		setPhone('')
+		setEmail('')
 	}
 
 	return (
@@ -36,7 +40,7 @@ export default function ContactsPage(props) {
 			<hr />
 			<section>
 				<h2>Contacts</h2>
-				<TileList contacts={contacts} />
+				{contacts && <TileList contacts={contacts} />}
 			</section>
 		</div>
 	)

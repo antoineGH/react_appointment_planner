@@ -19,14 +19,10 @@ function App() {
 	}, [])
 
 	const addContact = (name, phone, email) => {
-		const newContacts = contacts.slice()
-		newContacts.push({ name, phone, email })
-		setContacts(newContacts)
+		setContacts((oldContact) => [...oldContact, { name, phone, email }])
 	}
 	const addAppointment = (title, contact, date, time) => {
-		const newAppointments = appointments.slice()
-		newAppointments.push({ title, contact, date, time })
-		setAppointments(newAppointments)
+		setAppointments((oldAppointments) => [...oldAppointments, { title, contact, date, time }])
 	}
 
 	return (
