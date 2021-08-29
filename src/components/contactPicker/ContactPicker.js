@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ContactPicker(props) {
 	const { contacts, onChange } = props
-	let count = 0
+
 	return (
 		<select onChange={(e) => onChange(e)}>
 			{contacts.map((contact, count) => {
