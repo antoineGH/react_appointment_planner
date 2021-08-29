@@ -2,7 +2,7 @@ import React from 'react'
 import ContactPicker from '../contactPicker/ContactPicker'
 
 export default function AppointmentForm(props) {
-	const { contacts, title, setTitle, contact, setContact, date, setDate, time, setTime, handleSubmit } = props
+	const { contacts, title, setTitle, setContact, date, setDate, time, setTime, handleSubmit } = props
 
 	const getTodayString = () => {
 		const [month, day, year] = new Date().toLocaleDateString('en-US').split('/')

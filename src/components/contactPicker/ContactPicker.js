@@ -5,10 +5,11 @@ export default function ContactPicker(props) {
 
 	return (
 		<select onChange={(e) => onChange(e)}>
+			<option defaultValue='true'>Choose a contact</option>
 			{contacts.map((contact, count) => {
 				count++
 				return (
-					<option defaultValue={count === 0 && 'selected'} key={contact.name} value={contact.name}>
+					<option key={contact.name} value={contact.name}>
 						{contact.name}
 					</option>
 				)
