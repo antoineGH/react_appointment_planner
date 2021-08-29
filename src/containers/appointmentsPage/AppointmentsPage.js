@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default function AppointmentsPage() {
-	const handleSubmit = (e) => {
-		e.preventDefault()
-	}
+	// const handleSubmit = (e) => {
+	// 	e.preventDefault()
+	// }
 
 	return (
 		<div>
