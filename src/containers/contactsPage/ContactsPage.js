@@ -40,7 +40,7 @@ export default function ContactsPage(props) {
 			<hr />
 			<section>
 				<h2>Contacts</h2>
-				{contacts && <TileList contacts={contacts} />}
+				{contacts ? <TileList contacts={contacts} /> : <p>No Contacts</p>}
 			</section>
 		</div>
 	)
