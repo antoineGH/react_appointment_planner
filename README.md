@@ -76,12 +76,10 @@ yarn start
 
 ## 5. Project structure<a name="structure"></a>
 
-![Components Screenshot](https://github.com/antoineratat/react_dashboard_finance/blob/main/screenshots/2.png?raw=true)
+![Components Screenshot](https://github.com/antoineratat/react_appointment_planner/blob/main/screenshots/appointments-components.png?raw=true)
 
 ## 6. Screenshots<a name="screenshots"></a>
 
-Main Pages Full-Screen Desktop Mockup ![Components Screenshot](https://github.com/antoineratat/react_shop/blob/main/screenshots/3.png?raw=true)
+Contact Component ![Components Screenshot](https://github.com/antoineratat/react_appointment_planner/blob/main/screenshots/1_screen.PNG?raw=true)
 
-Product Detail – Mobile Version English ![Components Screenshot](https://github.com/antoineratat/react_shop/blob/main/screenshots/4.png?raw=true)
-
-Login Modal – Product Browsing – My Order – My Cart – My Delivery Information - Mobile ![Components Screenshot](https://github.com/antoineratat/react_shop/blob/main/screenshots/5.png?raw=true)
+Appointement Component ![Components Screenshot](https://github.com/antoineratat/react_appointment_planner/blob/main/screenshots/2_screen.PNG?raw=true)
