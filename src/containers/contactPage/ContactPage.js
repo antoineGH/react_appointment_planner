@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import ContactForm from '../../components/contactForm/ContactForm'
-import { TileList } from '../../components/tileList/TileList'
+import TileList from '../../components/tileList/TileList'
 
-export default function ContactsPage(props) {
-	const { contacts, addContact } = props
+export default function ContactPage(props) {
+	const { contacts, addContact, removeContact } = props
 	const [name, setName] = useState('')
 	const [phone, setPhone] = useState('')
 	const [email, setEmail] = useState('')
@@ -40,7 +40,7 @@ export default function ContactsPage(props) {
 			<hr />
 			<section>
 				<h2>Contacts</h2>
-				{contacts ? <TileList contacts={contacts} /> : <p>No Contacts</p>}
+				{contacts ? <TileList contacts={contacts} removeContact={removeContact} /> : <p>No Contact</p>}
 			</section>
 		</div>
 	)

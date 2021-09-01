@@ -12,21 +12,21 @@ export default function AppointmentForm(props) {
 	return (
 		<form onSubmit={(e) => handleSubmit(e)}>
 			<div className='contact_form_input'>
-				<label htmlFor='name'>Title</label>
-				<input id='name' type='text' placeholder='Appointment Title' value={title} onChange={(e) => setTitle(e.target.value)} />
+				<label htmlFor='title'>Title</label>
+				<input id='title' type='text' placeholder='Appointment Title' value={title} onChange={(e) => setTitle(e.target.value)} />
 			</div>
 			<div className='contact_form_input'>
-				<ContactPicker contacts={contacts} onChange={(e) => setContact(e.target.value)} />
+				<label htmlFor='contact'>Contact</label>
+				<ContactPicker id='contact' contacts={contacts} onChange={(e) => setContact(e.target.value)} />
 			</div>
 			<div className='contact_form_input'>
-				<label htmlFor='name'>Date</label>
-				<input id='date' type='date' placeholder='Appointment Date' value={date} onChange={(e) => setDate(e.target.value)} />
+				<label htmlFor='date'>Date</label>
+				<input id='date' type='date' placeholder='Appointment Date' min={getTodayString()} value={date} onChange={(e) => setDate(e.target.value)} />
 			</div>
 			<div className='contact_form_input'>
-				<label htmlFor='name'>Time</label>
-				<input min={getTodayString()} id='time' type='time' placeholder='Appointment Time' value={time} onChange={(e) => setTime(e.target.value)} />
+				<label htmlFor='time'>Time</label>
+				<input id='time' type='time' placeholder='Appointment Time' value={time} onChange={(e) => setTime(e.target.value)} />
 			</div>
-
 			<div className='contact_form_input'>
 				<input type='submit' />
 			</div>

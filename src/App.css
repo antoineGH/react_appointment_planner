@@ -36,3 +36,19 @@
 		transform: rotate(360deg);
 	}
 }
+
+nav a {
+	font-size: 16pt;
+	font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: #03a8d8;
+}
+
+nav > a.active {
+	text-decoration: none;
+	color: #9ea2aa;
+}

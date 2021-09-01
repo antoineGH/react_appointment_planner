@@ -1,52 +1,75 @@
-import React, { useState, useEffect } from 'react'
+import './App.css'
+import React, { useState } from 'react'
 import { Switch, Route, NavLink, BrowserRouter as Router } from 'react-router-dom'
-
-import AppointmentsPage from './containers/appointmentsPage/AppointmentsPage'
-import ContactsPage from './containers/contactsPage/ContactsPage'
+import AppointmentPage from './containers/appointmentPage/AppointmentPage'
+import ContactPage from './containers/contactPage/ContactPage'
 
 function App() {
-	const ROUTES = {
-		CONTACTS: '/contacts',
-		APPOINTMENTS: '/appointments',
-	}
+	const [contacts, setContacts] = useState([
+		{ name: 'Antoine', phone: '13111881660', email: 'antoine.ratat@gmail.com' },
+		{ name: 'Bastien', phone: '13111881885', email: 'bastien.ratat@gmail.com' },
+	])
 
-	const [appointments, setAppointments] = useState([])
-	const [contacts, setContacts] = useState([])
-
-	useEffect(() => {
-		addContact('Antoine', '0601156456', 'antoine.ratat@gmail.com')
-		addContact('Bastien', '0601156456', 'bastien.ratat@gmail.com')
-		addAppointment('Doctor', 'Antoine', '29/08/21', '15:30')
-	}, [])
+	const [appointments, setAppointments] = useState([
+		{ title: 'Doctor', contact: 'Antoine', date: '30/08/20', time: '15:30' },
+		{ title: 'Dentist', contact: 'Bastien', date: '31/08/20', time: '17:30' },
+	])
 
 	const addContact = (name, phone, email) => {
-		setContacts((oldContact) => [...oldContact, { name, phone, email }])
+		setContacts((existingContact) => [...existingContact, { name, phone, email }])
 	}
+
 	const addAppointment = (title, contact, date, time) => {
-		setAppointments((oldAppointments) => [...oldAppointments, { title, contact, date, time }])
+		setAppointments((existingAppointments) => [...existingAppointments, { title, contact, date, time }])
+	}
+
+	const removeContact = (position) => {
+		console.log(position)
+		let copyContacts = contacts.slice()
+		copyContacts.splice(position - 1, 1)
+		setContacts(copyContacts)
+	}
+
+	const removeAppointment = (position) => {
+		console.log(position)
+		let copyAppointments = appointments.slice()
+		copyAppointments.splice(position - 1, 1)
+		setAppointments(copyAppointments)
+	}
+
+	const routes = {
+		contacts: '/contacts',
+		appointments: '/appointments',
 	}
 
 	return (
-		<Router>
-			<nav>
-				<NavLink to={ROUTES.CONTACTS} activeClassName='active'>
-					Contacts
-				</NavLink>
-				<NavLink to={ROUTES.APPOINTMENTS} activeClassName='active'>
-					Appointments
-				</NavLink>
-			</nav>
-			<main>
-				<Switch>
-					<Route path={ROUTES.CONTACTS}>
-						<ContactsPage contacts={contacts} addContact={addContact} />
-					</Route>
-					<Route path={ROUTES.APPOINTMENTS}>
-						<AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />
-					</Route>
-				</Switch>
-			</main>
-		</Router>
+		<>
+			<Router>
+				<nav>
+					<NavLink to={routes.contacts} activeClassName='active'>
+						Contacts
+					</NavLink>
+					<NavLink to={routes.appointments} activeClassName='active'>
+						Appointments
+					</NavLink>
+				</nav>
+				<main>
+					<Switch>
+						<Route path={routes.contacts}>
+							<ContactPage contacts={contacts} addContact={addContact} removeContact={removeContact} />
+						</Route>
+						<Route path={routes.appointments}>
+							<AppointmentPage
+								appointments={appointments}
+								contacts={contacts}
+								addAppointment={addAppointment}
+								removeAppointment={removeAppointment}
+							/>
+						</Route>
+					</Switch>
+				</main>
+			</Router>
+		</>
 	)
 }
 

@@ -1,0 +1,30 @@
+.title-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	max-width: 800px;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+	border-radius: 3px;
+	background-color: #eee;
+	font-size: 14pt;
+	font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.remove-button {
+	font-size: 80%;
+	float: right;
+	border: 0;
+	border-radius: 3px;
+	background: transparent;
+	width: 30px;
+	height: 30px;
+	align-self: center;
+	justify-content: center;
+}
+
+.remove-button:hover {
+	color: #fff;
+	background-color: #000;
+}

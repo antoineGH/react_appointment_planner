@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import AppointmentForm from '../../components/appointmentForm/AppointmentForm'
-import { TileList } from '../../components/tileList/TileList'
+import TileList from '../../components/tileList/TileList'
 
-export default function AppointmentsPage(props) {
+export default function AppointmentPage(props) {
 	const { appointments, contacts, addAppointment } = props
 	const [title, setTitle] = useState('')
 	const [contact, setContact] = useState('')
