@@ -76,10 +76,10 @@ yarn start
 
 ## 5. Project structure<a name="structure"></a>
 
-![Components Screenshot](https://github.com/antoineratat/react_appointment_planner/blob/main/screenshots/appointments-components.png?raw=true)
+![Components Screenshot](https://templars.guru/app/github/react_appointment_planner/appointments-components.png)
 
 ## 6. Screenshots<a name="screenshots"></a>
 
-Contact Component ![Components Screenshot](https://github.com/antoineratat/react_appointment_planner/blob/main/screenshots/1_screen.PNG?raw=true)
+Contact Component ![Components Screenshot](https://templars.guru/app/github/react_appointment_planner/1_screen.PNG)
 
-Appointement Component ![Components Screenshot](https://github.com/antoineratat/react_appointment_planner/blob/main/screenshots/2_screen.PNG?raw=true)
+Appointement Component ![Components Screenshot](https://templars.guru/app/github/react_appointment_planner/2_screen.PNG)
